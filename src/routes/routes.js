@@ -1,0 +1,27 @@
+const express = require("express");
+const router = express.Router();
+const { login } = require("../controllers/Auth/login");
+const {
+  createAccount,
+  getAllUsers,
+  updateUser,
+  getSingleUser,
+  requestPasswordReset,
+  resetPasswordWithOTP,
+} = require("../controllers/Auth/CreateAccount");
+const projectRoutes = require("./project.routes");
+const amenityRoutes = require("./amenity.routes");
+const domainsRoutes = require("./domain.routes");
+
+router.post("/login", login);
+router.post("/create", createAccount);
+router.get("/users", getAllUsers);
+router.get("/users/:id", getSingleUser);
+router.put("/users/:id", updateUser);
+router.post("/request-password-reset", requestPasswordReset);
+router.post("/reset-password-otp", resetPasswordWithOTP);
+router.use(projectRoutes);
+router.use(amenityRoutes);
+router.use(domainsRoutes);
+
+module.exports = router;

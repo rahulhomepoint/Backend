@@ -1,0 +1,64 @@
+{
+  "projectList": {
+    "hero": {
+      "image": "",
+      "name": "",
+      "location": "",
+      "status": "",
+      "priceRange": "",
+      "configuration": "",
+      "landArea": "",
+      "possessionDate": ""
+    },
+    "projectOverview": {
+      "image": "",
+      "logo": "",
+      "projectOverviewDescription": "",
+      "CTALink": ""
+    },
+    "amenities": [1, 2, 3, 4, 5],
+    "KeyHeightlight": {
+      "image": "",
+      "title": "",
+      "description": ""
+    },
+    "location": {
+      "longitude": "",
+      "latitude": ""
+    },
+    "floorPlan": {
+      "plan": [
+        {
+          "planName": "",
+          "image": "",
+          "title": "",
+          "subTitle": "",
+          "description": "",
+          "carpetArea": "",
+          "saleableArea": "",
+          "parking": "",
+          "price": ""
+        }
+      ]
+    },
+    "about": {
+      "image": "",
+      "aboutProject": {
+        "image": "",
+        "title": "",
+        "description": ""
+      },
+      "aboutDeveloper": {
+        "image": "",
+        "title": "",
+        "description": ""
+      }
+    },
+    "gallery": ["img1", "img2", "img3", "img4", "img5"],
+    "video": "",
+    "CTA": {
+      "title": "",
+      "description": ""
+    }
+  }
+}

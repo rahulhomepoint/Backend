@@ -1,0 +1,321 @@
+{
+    "hero": {
+        "title": "Find your dream house",
+        "tagline": "Kolkata's only Real Estate platform with 100% highly rated sellers",
+        "property_details": {
+            "price_range": "₹1 Crore",
+            "configuration": [
+                "3 BHK",
+                "4 BHK"
+            ],
+            "land_area": "40 Acres",
+            "possession_date": "December 2026"
+        }
+    },
+    "overview": {
+        "section": "project_overview",
+        "title": "EMAMI AASTHA Overview",
+        "subtitle": "Project Overview",
+        "description": "Emami Astha, a Premium Bungalow Township at Joka, Kolkata is envisioned as a development conceptualized as an Urban forest, rich in diversity encouraging a healthy habitat ensuring growth of all living beings alike. The rich and diverse flora with the parks developed as mini forests having small & large waterbodies spread around the township, creating a nesting ground for local and migratory birds, developing an unbreakable bond between humans and the natural surroundings. The very thought of waking up early in the morning to the sounds of chirping birds enthralls an individual and infuses a vibrant energy which sustains through the day.",
+        "gallery_images": [
+            "assets/images/overview-1.jpg",
+            "assets/images/overview-2.jpg",
+            "assets/images/overview-3.jpg",
+            "assets/images/overview-4.jpg"
+        ],
+        "button": {
+            "label": "Download Brochure",
+            "link": "/downloads/emami-aastha-brochure.pdf"
+        }
+    },
+    "Amenities": {
+        "id": "amenities_form",
+        "title": "Select Project Amenities",
+        "fields": [
+            {
+                "label": "Amenities",
+                "name": "amenities",
+                "type": "checkbox_group",
+                "options": [
+                    {
+                        "label": "Swimming Pool",
+                        "value": "swimming_pool"
+                    },
+                    {
+                        "label": "Floating Cafe",
+                        "value": "floating_cafe"
+                    },
+                    {
+                        "label": "Pedal Boat Area",
+                        "value": "pedal_boat_area"
+                    },
+                    {
+                        "label": "Fishing Deck",
+                        "value": "fishing_deck"
+                    },
+                    {
+                        "label": "Yoga Deck",
+                        "value": "yoga_deck"
+                    },
+                    {
+                        "label": "Stargazing Deck",
+                        "value": "stargazing_deck"
+                    },
+                    {
+                        "label": "Pet Relief Area",
+                        "value": "pet_relief_area"
+                    },
+                    {
+                        "label": "Serene Temple",
+                        "value": "serene_temple"
+                    },
+                    {
+                        "label": "Aroma Garden",
+                        "value": "aroma_garden"
+                    },
+                    {
+                        "label": "Jogging Track",
+                        "value": "jogging_track"
+                    },
+                    {
+                        "label": "Skating Rink",
+                        "value": "skating_rink"
+                    },
+                    {
+                        "label": "Club House",
+                        "value": "club_house"
+                    },
+                    {
+                        "label": "Kids Play Area",
+                        "value": "kids_play_area"
+                    },
+                    {
+                        "label": "Cricket Turf",
+                        "value": "cricket_turf"
+                    }
+                ]
+            }
+        ]
+    },
+    "key_highlights": {
+        "id": "key_highlights_form",
+        "title": "Enter Project Key Highlights",
+        "fields": [
+            {
+                "label": "Highlights",
+                "name": "highlights",
+                "type": "repeater",
+                "min_items": 1,
+                "fields": [
+                    {
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "placeholder": "e.g. Prime Location",
+                        "required": true
+                    },
+                    {
+                        "label": "Description",
+                        "name": "description",
+                        "type": "textarea",
+                        "placeholder": "Enter the highlight details",
+                        "required": true
+                    },
+                    {
+                        "label": "Image",
+                        "name": "image",
+                        "type": "file",
+                        "accept": [
+                            "image/png",
+                            "image/jpeg",
+                            "image/webp"
+                        ],
+                        "required": false
+                    }
+                ]
+            }
+        ]
+    },
+    "location_advantage": {
+        "id": "location_advantage_form",
+        "title": "Location Advantage Setup",
+        "fields": [
+            {
+                "label": "Section Title",
+                "name": "section_title",
+                "type": "text",
+                "default": "Emami Aastha - Location Advantage"
+            },
+            {
+                "label": "Section Subtitle",
+                "name": "section_subtitle",
+                "type": "text",
+                "default": "The perfect balance of convenience, and great connectivity,"
+            },
+            {
+                "label": "Location Map Embed URL",
+                "name": "map_embed_url",
+                "type": "url",
+                "required": true,
+                "placeholder": "Enter Google Maps embed iframe link"
+            },
+            {
+                "label": "Location Categories",
+                "name": "location_categories",
+                "type": "repeater",
+                "min_items": 1,
+                "fields": [
+                    {
+                        "label": "Category Name",
+                        "name": "category",
+                        "type": "text",
+                        "placeholder": "e.g., Necessities"
+                    },
+                    {
+                        "label": "Items",
+                        "name": "items",
+                        "type": "array",
+                        "item_type": "text",
+                        "placeholder": "e.g., Hospitals, Schools, Parks"
+                    }
+                ]
+            }
+        ]
+    },
+    "layout_and_floorplan": {
+        "id": "layout_and_floorplan_form",
+        "title": "Layout & Floor Plans Input",
+        "fields": [
+            {
+                "label": "Section Title",
+                "name": "section_title",
+                "type": "text",
+                "default": "Emami Aastha Layout & Floor plans"
+            },
+            {
+                "label": "Section Subtitle",
+                "name": "section_subtitle",
+                "type": "text",
+                "default": "Discover the Blueprint of Luxury"
+            },
+            {
+                "label": "Tabs",
+                "name": "tabs",
+                "type": "array",
+                "item_type": "text",
+                "default": [
+                    "Master Plan",
+                    "2 BHK",
+                    "3 BHK",
+                    "4 BHK"
+                ]
+            },
+            {
+                "label": "Master Layout Description",
+                "name": "master_layout_description",
+                "type": "textarea",
+                "default": "At Emami Aastha, luxury living is complemented by modern conveniences..."
+            },
+            {
+                "label": "Carpet Area (sq.ft.)",
+                "name": "carpet_area",
+                "type": "text",
+                "default": "1000-1400"
+            },
+            {
+                "label": "Saleable Area (sq.ft.)",
+                "name": "saleable_area",
+                "type": "text",
+                "default": "1500-2100"
+            },
+            {
+                "label": "Number of Car Parks",
+                "name": "car_parks",
+                "type": "number",
+                "default": 1
+            },
+            {
+                "label": "Master Plan Image",
+                "name": "master_plan_image",
+                "type": "file",
+                "accept": [
+                    "image/png",
+                    "image/jpeg",
+                    "image/webp"
+                ]
+            },
+            {
+                "label": "Downloadable PDF Link",
+                "name": "download_pdf_url",
+                "type": "url",
+                "placeholder": "https://yourdomain.com/floorplan.pdf"
+            }
+        ]
+    },
+    "about": {
+        "id": "about_emami_section_form",
+        "title": "About Emami Section Setup",
+        "fields": [
+            {
+                "label": "Left Section - Image or Logo",
+                "name": "left_image",
+                "type": "file",
+                "accept": [
+                    "image/png",
+                    "image/jpeg",
+                    "image/webp"
+                ],
+                "required": false
+            },
+            {
+                "label": "Left Section Title",
+                "name": "left_title",
+                "type": "text",
+                "default": "Read our Story"
+            },
+            {
+                "label": "Right Section: About Emami Realty - Title",
+                "name": "realty_title",
+                "type": "text",
+                "default": "About Emami Realty"
+            },
+            {
+                "label": "About Emami Realty - Description",
+                "name": "realty_description",
+                "type": "textarea",
+                "default": "Emami Realty, the real estate arm of Emami Group was incorporated in 2006..."
+            },
+            {
+                "label": "Right Section: About Emami Group - Title",
+                "name": "group_title",
+                "type": "text",
+                "default": "About Emami Group"
+            },
+            {
+                "label": "About Emami Group - Description",
+                "name": "group_description",
+                "type": "textarea",
+                "default": "Emami is a growth story of a dream that started with a humble beginning..."
+            },
+            {
+                "label": "Call-to-Action Button",
+                "name": "cta_button",
+                "type": "group",
+                "fields": [
+                    {
+                        "label": "Button Text",
+                        "name": "text",
+                        "type": "text",
+                        "default": "Read More"
+                    },
+                    {
+                        "label": "Button Link",
+                        "name": "link",
+                        "type": "url",
+                        "placeholder": "https://yourdomain.com/about"
+                    }
+                ]
+            }
+        ]
+    }
+}
