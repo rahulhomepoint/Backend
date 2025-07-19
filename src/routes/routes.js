@@ -8,6 +8,7 @@ const {
   getSingleUser,
   requestPasswordReset,
   resetPasswordWithOTP,
+  countUsers,
 } = require("../controllers/Auth/CreateAccount");
 const projectRoutes = require("./project.routes");
 const amenityRoutes = require("./amenity.routes");
@@ -20,6 +21,7 @@ router.get("/users/:id", getSingleUser);
 router.put("/users/:id", updateUser);
 router.post("/request-password-reset", requestPasswordReset);
 router.post("/reset-password-otp", resetPasswordWithOTP);
+router.get("/users-count", countUsers);
 router.use(projectRoutes);
 router.use(amenityRoutes);
 router.use(domainsRoutes);
