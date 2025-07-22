@@ -16,6 +16,7 @@ const domainsRoutes = require("./domain.routes");
 const homeHeroRoutes = require("./homehero.routes");
 const homeAboutRoutes = require("./homeabout.routes");
 const associatedeveloperRoutes = require("./associatedeveloper.routes");
+const paymentListRoutes = require("./paymentlist.routes");
 
 router.post("/login", login);
 router.post("/create", createAccount);
@@ -31,5 +32,6 @@ router.use(domainsRoutes);
 router.use(homeHeroRoutes);
 router.use(homeAboutRoutes);
 router.use(associatedeveloperRoutes);
+router.use(paymentListRoutes);
 
 module.exports = router;
