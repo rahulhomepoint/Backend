@@ -174,6 +174,21 @@ exports.deleteProject = async (req, res) => {
     }
 };
 
+// Get only zones and launches from all projects
+exports.getZonesAndLaunches = async (req, res) => {
+    try {
+        const projects = await Project.find({}, { zones: 1, fresh_project: 1 });
+        const result = projects.map(p => ({
+            _id: p._id,
+            zones: p.zones || [],
+            fresh_project: p.fresh_project === true, // Ensure boolean
+        }));
+        res.json(result);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 // Get the count of all projects
 exports.countProjects = async (req, res) => {
     try {

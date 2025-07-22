@@ -16,6 +16,9 @@ const projectImageFields = [
 // Create a new project
 router.post('/projects', upload.any(), ProjectController.createProject);
 
+// Get only zones and launches from all projects
+router.get('/projects/zones-launches', ProjectController.getZonesAndLaunches);
+
 // Get a single project by ID
 router.get('/projects/:id', ProjectController.getProject);
 

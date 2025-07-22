@@ -1,4 +1,3 @@
-const connectDB = require("../../config/mongo");
 const User = require("../../models/Auth/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -26,5 +25,5 @@ exports.login = async (req, res) => {
     message: "Login successful",
     token,
     userName: user.name,
-  });cc
+  });
 };

@@ -13,6 +13,9 @@ const {
 const projectRoutes = require("./project.routes");
 const amenityRoutes = require("./amenity.routes");
 const domainsRoutes = require("./domain.routes");
+const homeHeroRoutes = require("./homehero.routes");
+const homeAboutRoutes = require("./homeabout.routes");
+const associatedeveloperRoutes = require("./associatedeveloper.routes");
 
 router.post("/login", login);
 router.post("/create", createAccount);
@@ -25,5 +28,8 @@ router.get("/users-count", countUsers);
 router.use(projectRoutes);
 router.use(amenityRoutes);
 router.use(domainsRoutes);
+router.use(homeHeroRoutes);
+router.use(homeAboutRoutes);
+router.use(associatedeveloperRoutes);
 
 module.exports = router;
