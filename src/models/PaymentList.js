@@ -1,20 +1,10 @@
 const mongoose = require("mongoose");
 
 const PaymentListSchema = new mongoose.Schema({
-  amount: {
-    type: Number,
-    required: true,
-  },
-  date: {
-    type: Date,
-    required: true,
-  },
-  method: {
+  images: [{
     type: String,
-  },
-  reference: {
-    type: String,
-  },
+    required: true,
+  }],
 });
 
 module.exports = mongoose.model("PaymentList", PaymentListSchema); 

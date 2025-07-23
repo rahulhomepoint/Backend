@@ -2,8 +2,8 @@ const PaymentList = require('../../models/PaymentList');
 
 const createPayment = async (req, res) => {
   try {
-    const { amount, date, method, reference } = req.body;
-    const newPayment = new PaymentList({ amount, date, method, reference });
+    const { images } = req.body;
+    const newPayment = new PaymentList({ images });
     await newPayment.save();
     res.status(201).json({ message: 'Payment created successfully', data: newPayment });
   } catch (error) {
@@ -27,10 +27,7 @@ const updatePayment = async (req, res) => {
     if (!payment) {
       return res.status(404).json({ message: 'Payment not found' });
     }
-    payment.amount = req.body.amount || payment.amount;
-    payment.date = req.body.date || payment.date;
-    payment.method = req.body.method || payment.method;
-    payment.reference = req.body.reference || payment.reference;
+    payment.images = req.body.images || payment.images;
     await payment.save();
     res.status(200).json({ message: 'Payment updated successfully', data: payment });
   } catch (error) {
@@ -51,9 +48,22 @@ const deletePayment = async (req, res) => {
   }
 };
 
-// Placeholder: Remove a method by payment ID and method index (if methods were an array)
-const removePaymentMethodByIndex = async (req, res) => {
-  return res.status(400).json({ message: 'Not implemented: PaymentList does not have an array field to remove by index.' });
+const removePaymentImageByIndex = async (req, res) => {
+  try {
+    const { id, index } = req.params;
+    const payment = await PaymentList.findById(id);
+    if (!payment) {
+      return res.status(404).json({ message: 'Payment not found' });
+    }
+    if (!Array.isArray(payment.images) || index < 0 || index >= payment.images.length) {
+      return res.status(400).json({ message: 'Image index out of range' });
+    }
+    payment.images.splice(index, 1);
+    await payment.save();
+    res.status(200).json({ message: 'Image removed from payment successfully', data: payment });
+  } catch (error) {
+    res.status(500).json({ message: 'Error removing image from payment', error: error.message });
+  }
 };
 
 module.exports = {
@@ -61,5 +71,5 @@ module.exports = {
   getAllPayments,
   updatePayment,
   deletePayment,
-  removePaymentMethodByIndex, // Exported for future use
+  removePaymentImageByIndex,
 }; 
